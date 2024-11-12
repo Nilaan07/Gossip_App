@@ -1,15 +1,36 @@
+/* General styling */
 body {
     background-color: #f3f2f3;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Header and Title */
 header {
     text-align: center;
-    padding: 10px;
-    background-color: #b7b5b9;
+    padding: 15px;
+    background-color: #6a1b9a;
+    color: white;
+    border-bottom: 3px solid #4a148c;
 }
 
+header h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f1e4f7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+/* Chat container */
+#chat {
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+}
+
+/* Messages */
 #messages {
     padding-bottom: 30%;
     margin-top: 20px;
@@ -25,18 +46,25 @@ li {
     width: 50%;
 }
 
+/* Sender and received messages */
 li span {
     font-style: italic;
     font-weight: bolder;
     color: #b5b0b9;
 }
 
-#chat {
-    width: 80%;
-    margin: auto;
-    max-width: 600px;
+.sent {
+    text-align: right;
+    background-color: #a79cb3;
+    margin-left: 50%;
 }
 
+.sent span {
+    margin-left: 5px;
+    color: #6929ca;
+}
+
+/* Message form */
 #message-form {
     text-align: center;
     position: fixed;
@@ -63,15 +91,4 @@ button {
     background-color: #6929ca;
     color: white;
     cursor: pointer;
-}
-
-.sent {
-    text-align: right;
-    background-color: #a79cb3;
-    margin-left: 50%;
-}
-
-.sent span {
-    margin-left: 5px;
-    color: #6929ca;
 }
