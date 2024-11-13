@@ -1,94 +1,147 @@
-/* General styling */
+/* Global Styles */
 body {
-    background-color: #f3f2f3;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8, #d9e4f1);
 }
 
-/* Header and Title */
-header {
-    text-align: center;
-    padding: 15px;
-    background-color: #6a1b9a;
-    color: white;
-    border-bottom: 3px solid #4a148c;
+/* Login Page Styles */
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
 }
 
-header h2 {
+/* Title for Login Page */
+#login-title {
     font-size: 2em;
     font-weight: bold;
-    color: #f1e4f7;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    letter-spacing: 2px;
-}
-
-/* Chat container */
-#chat {
-    width: 80%;
-    margin: auto;
-    max-width: 600px;
-}
-
-/* Messages */
-#messages {
-    padding-bottom: 30%;
-    margin-top: 20px;
-}
-
-li {
-    list-style-type: none;
-    margin-bottom: 10px;
-    background-color: #6929ca;
-    padding: 5px;
-    border-radius: 10px;
-    color: white;
-    width: 50%;
-}
-
-/* Sender and received messages */
-li span {
-    font-style: italic;
-    font-weight: bolder;
-    color: #b5b0b9;
-}
-
-.sent {
-    text-align: right;
-    background-color: #a79cb3;
-    margin-left: 50%;
-}
-
-.sent span {
-    margin-left: 5px;
-    color: #6929ca;
-}
-
-/* Message form */
-#message-form {
+    color: #333;
+    margin-bottom: 20px;
     text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #b7b5b9;
-    padding: 10px;
 }
 
-input {
-    width: 70%;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-button {
-    width: 25%;
-    height: 38px;
-    border: none;
-    border-radius: 5px;
-    background-color: #6929ca;
+/* Button Styles */
+#google-login-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #5a9bd4;
     color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#google-login-btn img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#google-login-btn:hover {
+    background-color: #4a8dc3;
+}
+
+/* Chat Page Styles (Keep old design) */
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+#chat-title {
+
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    padding: 15px;
+    background-color: #f7f9fc;
+    border-bottom: 2px solid #e3e8ee;
+    position: fixed; /* This makes the title stick to the top */
+    top: 0; /* Position it at the very top of the page */
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Keep it on top of other elements */
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fafbfc;
+}
+
+#messages li {
+    list-style-type: none;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#messages li.sent {
+    background-color: #d3eaf2;
+    text-align: right;
+}
+
+#messages li.receive {
+    background-color: #e9f0f4;
+    text-align: left;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #888;
+}
+
+#message-form {
+    display: flex;
+    border-top: 2px solid #e3e8ee;
+    padding: 10px;
+    background-color: #f7f9fc;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccd1d9;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#send-button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #5a9bd4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-button:hover {
+    background-color: #4a8dc3;
 }
