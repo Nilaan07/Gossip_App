@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gossip - Login</title>
+    <title>Gossip</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div id="login-container">
-        <h2 id="login-title">Gossip - Login</h2> <!-- Updated title styling -->
-        <button id="google-login-btn">
-            <img src="icon-google.png" alt="Google Icon" style="width: 30px; height:30px; margin-right:8px; vertical-align:middle;">
-            Login with Google
-        </button>
+    <header id="chat-header" style="display: none;">
+        <h2 id="chat-title">Gossip</h2>
+    </header>
+
+    <div id="chat" style="display: none;">
+        <ul id="messages"></ul>
+
+        <form id="message-form">
+            <input id="message-input" type="text" placeholder="Type your message" />
+            <button id="send-button" type="submit">Send</button>
+        </form>
     </div>
 
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-    <script src="login.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
